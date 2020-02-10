@@ -1,7 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { StylesProvider } from '@material-ui/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 
-function App() {
-  return <div>Hello</div>
-}
+import muiTheme from './muiTheme';
+import GlobalStyle from './globalStyles';
+import Landing from './components/Landing';
+import NotFound from './components/NotFound';
+
+const App = () => (
+  <BrowserRouter>
+    <StylesProvider injectFirst>
+      <ThemeProvider theme={muiTheme}>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route component={NotFound} />
+        </Switch>
+        <GlobalStyle />
+      </ThemeProvider>
+    </StylesProvider>
+  </BrowserRouter>
+);
 
 export default App;
