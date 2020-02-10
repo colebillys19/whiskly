@@ -29,6 +29,17 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  .MuiPopover-paper {
+    width: 7.2rem !important;
+  }
+
+  .MuiMenuItem-root {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 export default GlobalStyle;

@@ -1,8 +1,11 @@
-import React, { Fragment, useState } from 'react';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+import React, { useState } from 'react';
 
-import { StyledLabel } from '../styledComponents';
+import {
+  CohortSelectWrapper,
+  StyledLabel,
+  StyledMenuItem,
+  StyledSelect,
+} from '../styledComponents';
 
 const CohortSelect = () => {
   const [cohort, setCohort] = useState(13);
@@ -12,15 +15,19 @@ const CohortSelect = () => {
   };
   
   return (
-    <Fragment>
-      <StyledLabel>Cohort:</StyledLabel>
-      <Select value={cohort} onChange={handleChange}>
-        <MenuItem value={11}>11</MenuItem>
-        <MenuItem value={12}>12</MenuItem>
-        <MenuItem value={13}>13</MenuItem>
-        <MenuItem value={14}>14</MenuItem>
-      </Select>
-    </Fragment>
+    <CohortSelectWrapper>
+      <StyledLabel>Cohort</StyledLabel>
+      <StyledSelect
+        onChange={handleChange}
+        value={cohort}
+        variant="outlined"
+      >
+        <StyledMenuItem value={11}>11</StyledMenuItem>
+        <StyledMenuItem value={12}>12</StyledMenuItem>
+        <StyledMenuItem value={13}>13</StyledMenuItem>
+        <StyledMenuItem value={14}>14</StyledMenuItem>
+      </StyledSelect>
+    </CohortSelectWrapper>
   );
 };
 

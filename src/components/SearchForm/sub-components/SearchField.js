@@ -1,18 +1,20 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
-import TextField from '@material-ui/core/TextField';
+
+import { StyledTextField } from '../styledComponents';
 
 const SearchField = () => {
-  const adornment = (
+  const startAdornment = (
     <InputAdornment position="start">
       <SearchIcon />
     </InputAdornment>
   );
+  
   return (
-    <TextField
-      InputProps={{ startAdornment: adornment }}
-    
+    <StyledTextField
+      InputProps={{ startAdornment }}
+      variant="outlined"
     />
   );
 };
