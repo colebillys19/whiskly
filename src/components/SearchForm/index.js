@@ -7,8 +7,8 @@ import {
   StyledIconButton,
   StyleWrapper,
 } from './styledComponents';
-import CohortSelect from './sub-components/CohortSelect';
-import SearchField from './sub-components/SearchField';
+import CohortSelect from './CohortSelect';
+import SearchField from './SearchField';
 
 const SearchForm = () => (
   <StyledForm>

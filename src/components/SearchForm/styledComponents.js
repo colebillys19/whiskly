@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
@@ -43,6 +44,10 @@ export const StyledIconButton = styled(IconButton)`
   margin-right: -1.3rem;
 `;
 
+export const StyledInputAdornment = styled(InputAdornment)`
+  margin-left: -0.3rem;
+`;
+
 export const StyledLabel = styled.label`
   font-size: 1.8rem;
 `;
@@ -56,7 +61,7 @@ export const StyledSelect = styled(Select)`
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 2.2rem;
   height: 4.2rem;
-  width: 4.7rem;
+  width: 4.6rem;
   margin-left: 1.3rem;
   padding-top: 0.2rem;
 `;

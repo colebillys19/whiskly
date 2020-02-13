@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .MuiPopover-paper {
-    width: 4.7rem !important;
+    width: 4.6rem !important;
   }
 
   .MuiList-root {
