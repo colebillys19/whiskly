@@ -1,8 +1,12 @@
 import React from 'react';
-import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 
-import { StyledButton, StyledForm, StyleWrapper } from './styledComponents';
+import {
+  StyledButton,
+  StyledForm,
+  StyledIconButton,
+  StyleWrapper,
+} from './styledComponents';
 import CohortSelect from './sub-components/CohortSelect';
 import SearchField from './sub-components/SearchField';
 
@@ -18,9 +22,9 @@ const SearchForm = () => (
       >
         GO
       </StyledButton>
-      <IconButton>
+      <StyledIconButton>
         <InfoIcon />
-      </IconButton>
+      </StyledIconButton>
     </StyleWrapper>
   </StyledForm>
 );

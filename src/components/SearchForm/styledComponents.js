@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
@@ -18,7 +19,6 @@ export const CohortSelectWrapper = styled.div`
 
 export const StyledButton = styled(Button)`
   height: 4.2rem;
-  margin-left: 1.3rem;
   min-width: 0;
   padding: 0;
   width: 5.5rem;
@@ -34,9 +34,13 @@ export const StyledForm = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  outline: 1px solid orange;
-  margin-left: -2.8rem;
+  margin-left: -4.1rem;
   margin-top: -1rem;
+`;
+
+export const StyledIconButton = styled(IconButton)`
+  margin-left: -1.3rem;
+  margin-right: -1.3rem;
 `;
 
 export const StyledLabel = styled.label`
@@ -58,7 +62,7 @@ export const StyledSelect = styled(Select)`
 `;
 
 export const StyledTextField = styled(TextField)`
-  margin-left: 2.8rem;
+  margin-left: 4.1rem;
   margin-top: 1rem;
   max-width: 60rem;
   width: 90vw;
@@ -73,7 +77,7 @@ export const StyleWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-left: 2.8rem;
+  margin-left: 4.1rem;
   margin-top: 1rem;
-  width: 28.8rem;
+  width: 27rem;
 `;
