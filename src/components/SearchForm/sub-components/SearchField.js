@@ -12,10 +12,7 @@ const SearchField = () => {
   );
   
   return (
-    <StyledTextField
-      InputProps={{ startAdornment }}
-      variant="outlined"
-    />
+    <StyledTextField InputProps={{ startAdornment }} />
   );
 };
 

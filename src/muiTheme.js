@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-// import amber from '@material-ui/core/colors/amber';
-// import deepPurple from '@material-ui/core/colors/deepPurple';
+import green from '@material-ui/core/colors/green';
+import indigo from '@material-ui/core/colors/indigo';
 
 const theme = createMuiTheme({
   // component styles
@@ -8,15 +8,15 @@ const theme = createMuiTheme({
     // icons
     MuiSvgIcon: {
       root: {
-        fontSize: 35,
+        fontSize: 30,
       },
     },
   },
   // colors
-  // palette: {
-  //   primary: { dark: deepPurple[300] },
-  //   secondary: { main: amber[300] },
-  // },
+  palette: {
+    primary: { main: indigo['A700'] },
+    secondary: { main: green[700] },
+  },
 });
 
 export default theme;

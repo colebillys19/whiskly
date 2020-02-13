@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body * {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2rem;
   }
   
@@ -31,7 +31,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .MuiPopover-paper {
-    width: 7.2rem !important;
+    width: 4.7rem !important;
+  }
+
+  .MuiList-root {
+    padding: 0;
   }
 
   .MuiMenuItem-root {

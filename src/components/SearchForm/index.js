@@ -11,7 +11,13 @@ const SearchForm = () => (
     <SearchField />
     <StyleWrapper>
       <CohortSelect />
-      <StyledButton variant="outlined">GO</StyledButton>
+      <StyledButton
+        color="secondary"
+        disableElevation
+        variant="contained"
+      >
+        GO
+      </StyledButton>
       <IconButton>
         <InfoIcon />
       </IconButton>

@@ -16,11 +16,10 @@ const CohortSelect = () => {
   
   return (
     <CohortSelectWrapper>
-      <StyledLabel>Cohort</StyledLabel>
+      <StyledLabel>cohort</StyledLabel>
       <StyledSelect
         onChange={handleChange}
         value={cohort}
-        variant="outlined"
       >
         <StyledMenuItem value={11}>11</StyledMenuItem>
         <StyledMenuItem value={12}>12</StyledMenuItem>
