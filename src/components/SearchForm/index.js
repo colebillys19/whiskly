@@ -6,7 +6,7 @@ import {
   StyledForm,
   StyledIconButton,
   StyleWrapper,
-} from './styledComponents';
+} from './styles';
 import CohortSelect from './CohortSelect';
 import SearchField from './SearchField';
 

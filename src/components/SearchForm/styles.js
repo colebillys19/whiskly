@@ -11,12 +11,12 @@ import theme from '../../muiTheme';
 export const CohortSelectWrapper = styled.div`
   align-items: center;
   display: flex;
-  & .MuiSelect-select:focus {
-    background-color: white;
-  }
   & .MuiSelect-icon {
     font-size: 2.5rem !important;
     margin-right: -0.7rem;
+  }
+  & .MuiSelect-select:focus {
+    background-color: white;
   }
 `;
 
@@ -37,6 +37,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 3rem;
   margin-left: -4.1rem;
   margin-top: -1rem;
 `;
@@ -48,7 +49,6 @@ export const StyledIconButton = styled(IconButton)`
 
 export const StyledInputAdornment = styled(InputAdornment)`
   margin-left: -0.3rem;
-  margin-right: 0.4rem;
   & svg { color: ${({ focused }) => focused === 1 ? theme.palette.primary.main : 'inherit' }; }
 `;
 
@@ -65,9 +65,9 @@ export const StyledSelect = styled(Select)`
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 2.2rem;
   height: 4.2rem;
-  width: 4.6rem;
   margin-left: 1.3rem;
   padding-top: 0.2rem;
+  width: 4.6rem;
   & :focus { color: ${theme.palette.primary.main}; }
 `;
 
@@ -76,11 +76,12 @@ export const StyledTextField = styled(TextField)`
   margin-top: 1rem;
   max-width: 60rem;
   width: 90vw;
-  & .MuiInputBase-root { height: 4.2rem; }
   & .MuiInputBase-input {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.2rem;
+    &:focus { color: ${theme.palette.primary.main}; }
   }
+  & .MuiInputBase-root { height: 4.2rem; }
 `;
 
 export const StyleWrapper = styled.div`

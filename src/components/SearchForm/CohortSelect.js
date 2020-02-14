@@ -5,7 +5,7 @@ import {
   StyledLabel,
   StyledMenuItem,
   StyledSelect,
-} from './styledComponents';
+} from './styles';
 
 const CohortSelect = () => {
   const [cohort, setCohort] = useState(13);

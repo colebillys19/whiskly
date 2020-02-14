@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchIcon from '@material-ui/icons/SearchTwoTone';
 
-import { StyledInputAdornment, StyledTextField } from './styledComponents';
+import { StyledInputAdornment, StyledTextField } from './styles';
 
 const SearchField = () => {
   const [focused, toggleFocus] = useState(0);

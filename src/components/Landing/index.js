@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SearchForm from '../SearchForm';
+import LandingView from '../LandingView';
 
-const Landing = () => <SearchForm />
+const Landing = () => <LandingView />;
 
 export default Landing;
