@@ -16,7 +16,7 @@ const SearchForm = () => (
     <StyleWrapper>
       <CohortSelect />
       <StyledButton
-        color="secondary"
+        color="primary"
         disableElevation
         variant="contained"
       >

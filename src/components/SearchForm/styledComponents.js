@@ -6,6 +6,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 
+import theme from '../../muiTheme';
+
 export const CohortSelectWrapper = styled.div`
   align-items: center;
   display: flex;
@@ -46,6 +48,8 @@ export const StyledIconButton = styled(IconButton)`
 
 export const StyledInputAdornment = styled(InputAdornment)`
   margin-left: -0.3rem;
+  margin-right: 0.4rem;
+  & svg { color: ${({ focused }) => focused === 1 ? theme.palette.primary.main : 'inherit' }; }
 `;
 
 export const StyledLabel = styled.label`
@@ -64,6 +68,7 @@ export const StyledSelect = styled(Select)`
   width: 4.6rem;
   margin-left: 1.3rem;
   padding-top: 0.2rem;
+  & :focus { color: ${theme.palette.primary.main}; }
 `;
 
 export const StyledTextField = styled(TextField)`
@@ -74,7 +79,7 @@ export const StyledTextField = styled(TextField)`
   & .MuiInputBase-root { height: 4.2rem; }
   & .MuiInputBase-input {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 `;
 
