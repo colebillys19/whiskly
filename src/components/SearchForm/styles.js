@@ -16,7 +16,7 @@ export const CohortSelectWrapper = styled.div`
     margin-right: -0.7rem;
   }
   & .MuiSelect-select:focus {
-    background-color: white;
+    background-color: #fffaf1;
   }
 `;
 
