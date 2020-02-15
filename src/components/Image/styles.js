@@ -4,8 +4,10 @@ export const ImageContainer = styled.div`
   background-image: url(${({ image }) => image});
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   bottom: 0;
   left: 0;
+  margin: ${({ margin }) => margin};
   position: absolute;
   right: 0;
   top: 0;

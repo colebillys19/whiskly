@@ -9,7 +9,8 @@ export const StyledModal = styled(Modal)`
 
 export const ModalContentWrapper = styled.div`
   background-color: white;
-  border: 0.5rem solid #000;
+  border: 0.5rem solid black;
   outline: none;
-  padding: 1rem;
+  padding: 3rem;
+  border-radius: 1rem;
 `;

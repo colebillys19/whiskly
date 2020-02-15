@@ -7,6 +7,7 @@ const Image = ({
   breakpointStyles,
   className,
   image,
+  margin,
   ratio,
   width,
 }) => (
@@ -16,7 +17,7 @@ const Image = ({
     ratio={ratio}
     width={width}
   >
-    <ImageContainer image={image} />
+    <ImageContainer image={image} margin={margin} />
   </Wrapper>
 );
 
@@ -24,6 +25,7 @@ Image.propTypes = {
   breakpointStyles: T.string,
   className: T.string,
   image: T.string.isRequired,
+  margin: T.string,
   ratio: T.string,
   width: T.string,
 };
@@ -31,6 +33,7 @@ Image.propTypes = {
 Image.defaultProps = {
   breakpointStyles: '',
   className: '',
+  margin: '',
   ratio: '56.25%',
   width: '100%',
 }

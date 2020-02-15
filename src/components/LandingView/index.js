@@ -2,7 +2,8 @@ import React, { useState, Fragment } from 'react';
 
 import SearchForm from '../SearchForm';
 import InfoModal from '../InfoModal';
-import PlaceholderImage from '../../images/placeholder.jpg';
+// import PlaceholderImage from '../../images/placeholder.jpg';
+import LandingGraphic from '../../images/landing-graphic.png';
 import { breakpointStyles, StyledImage, StyledSection } from './styles';
 
 const LandingView = () => {
@@ -20,8 +21,9 @@ const LandingView = () => {
     <Fragment>
       <StyledSection>
         <StyledImage
-          image={PlaceholderImage}
+          image={LandingGraphic}
           breakpointStyles={breakpointStyles}
+          margin="1rem"
           ratio="62.5%"
           width="60rem"
         />
