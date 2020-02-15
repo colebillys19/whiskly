@@ -1,11 +1,16 @@
 import React, { forwardRef } from 'react';
 
-import { ModalContentWrapper } from './styles';
+import { modalText } from './constants';
+import {
+  Heading,
+  ModalContentWrapper,
+  Text,
+} from './styles';
 
 const ModalContent = forwardRef((props, ref) => (
   <ModalContentWrapper ref={ref} {...props}>
-    <h2 id="info-modal">Transition modal</h2>
-    <p id="describes-how-to-search">react-transition-group animates me.</p>
+    <Heading id="info-modal">Info Modal</Heading>
+    <Text id="describes-how-to-search">{modalText}</Text>
 	</ModalContentWrapper>
 ));
 
