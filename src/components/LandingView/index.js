@@ -24,7 +24,7 @@ const LandingView = () => {
           image={LandingGraphic}
           breakpointStyles={breakpointStyles}
           margin="1rem"
-          ratio="62.5%"
+          ratio="50%"
           width="60rem"
         />
         <SearchForm handleModalOpen={handleModalOpen} />

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ImageContainer = styled.div`
+  outline: 1px solid purple;
   background-image: url(${({ image }) => image});
   background-position: center;
   background-size: contain;
@@ -14,6 +15,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  outline: 1px solid green;
   display: inline-block;
   position: relative;
   width: ${({ width }) => width};
