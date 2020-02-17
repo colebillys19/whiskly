@@ -68,7 +68,7 @@ export const StyledSelect = styled(Select)`
   height: 4.2rem;
   margin-left: 1.3rem;
   padding-top: 0.2rem;
-  width: 4.6rem;
+  width: 4.7rem;
   & :focus { color: ${theme.palette.primary.main}; }
 `;
 
@@ -91,5 +91,5 @@ export const StyleWrapper = styled.div`
   justify-content: space-between;
   margin-left: 4.1rem;
   margin-top: 1rem;
-  width: 27rem;
+  width: 27.1rem;
 `;
