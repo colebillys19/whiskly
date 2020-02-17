@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 
 import theme from '../../muiTheme';
+import { backgroundOffWhite } from '../../styleConstants';
 
 export const CohortSelectWrapper = styled.div`
   align-items: center;
@@ -16,7 +17,7 @@ export const CohortSelectWrapper = styled.div`
     margin-right: -0.7rem;
   }
   & .MuiSelect-select:focus {
-    background-color: #fffaf1;
+    background-color: ${backgroundOffWhite};
   }
 `;
 

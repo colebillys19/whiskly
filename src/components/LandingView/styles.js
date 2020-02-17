@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Image from '../Image';
 
 export const StyledImage = styled(Image)`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const StyledSection = styled.section`
@@ -11,9 +11,7 @@ export const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 3rem;
-  min-height: 100vh;
-  position: relative;
+  min-height: calc(100vh - 4rem);
   width: 100%;
 `;
 

@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { backgroundOffWhite } from './styleConstants';
+
 const GlobalStyle = createGlobalStyle`
   html {
-    background-color: #fffaf1;
+    background-color: ${backgroundOffWhite};
     box-sizing: border-box;
     font-size: 62.5%;
   }
