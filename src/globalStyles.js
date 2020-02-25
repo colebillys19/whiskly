@@ -33,7 +33,11 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  .MuiPopover-paper {
+  /*** popover styles, popovers used w/ SearchForm/CohortSelect & SearchForm/SearchField ***/
+
+  .MuiMenu-paper {
+    border: 0.1rem solid #ccc;
+    border-radius: 0.2rem;
     width: 4.8rem !important;
   }
 
@@ -46,6 +50,9 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     padding-left: 0;
     padding-right: 0;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #eee;
+    }
   }
 `;
 
