@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { backgroundOffWhite } from './styleConstants';
+import { backgroundOffWhite, boxShadow } from './styleConstants';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -33,11 +33,14 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  /*** popover styles, popovers used w/ SearchForm/CohortSelect & SearchForm/SearchField ***/
+  /**************************************************/
+  /********** autocomplete & select styles **********/
+  /**************************************************/
 
   .MuiMenu-paper {
     border: 0.1rem solid #ccc;
     border-radius: 0.2rem;
+    box-shadow: ${boxShadow};
     width: 4.8rem !important;
   }
 
@@ -53,6 +56,30 @@ const GlobalStyle = createGlobalStyle`
     &:not(:last-of-type) {
       border-bottom: 1px solid #eee;
     }
+  }
+
+  .MuiAutocomplete-paper {
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ccc;
+    margin: 0;
+    box-shadow: ${boxShadow};
+  }
+
+  .MuiAutocomplete-listbox {
+    padding: 0;
+  }
+
+  .MuiAutocomplete-option {
+    padding-left: 1.5rem;
+    padding-right: 0;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .MuiAutocomplete-clearIndicator {
+    display: relative;
+    bottom: 0.6rem;
   }
 `;
 
