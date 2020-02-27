@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 // import amber from '@material-ui/core/colors/amber';
 // import indigo from '@material-ui/core/colors/indigo';
+// import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const theme = createMuiTheme({
   // component styles
@@ -14,7 +15,7 @@ const theme = createMuiTheme({
   },
   // colors
   palette: {
-    // primary: { main: indigo['A700'] },
+    primary: { main: '#1d1d1d' },
     // secondary: { main: amber[500] },
   },
 });

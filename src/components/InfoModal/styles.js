@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import Backdrop from '@material-ui/core/Backdrop';
 import Modal from '@material-ui/core/Modal';
 
-import { backgroundOffWhite } from '../../styleConstants';
+import { offBlack, offWhite } from '../../styleConstants';
 
 export const ModalContentWrapper = styled.div`
-  background-color: ${backgroundOffWhite};
-  border: 0.5rem solid black;
+  background-color: ${offWhite};
+  border: 0.5rem solid ${offBlack};
   outline: none;
   padding: 5rem;
   position: absolute;

@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { backgroundOffWhite, boxShadow } from './styleConstants';
+import { backgroundColor, boxShadow } from './styleConstants';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    background-color: ${backgroundOffWhite};
+    background-color: ${backgroundColor};
     box-sizing: border-box;
     font-size: 62.5%;
   }
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body * {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 2rem;
   }
   
@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     border: 0.1rem solid #ccc;
     border-radius: 0.2rem;
     box-shadow: ${boxShadow};
-    width: 4.8rem !important;
+    width: 5rem !important;
   }
 
   .MuiList-root {
