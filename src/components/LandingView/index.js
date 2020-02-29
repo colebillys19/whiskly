@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 
 import SearchForm from '../SearchForm';
 import InfoModal from '../InfoModal';
-import LandingGraphic from '../../images/landing-graphic-a.png';
+import LandingGraphic from '../../images/landing-graphic.png';
 import { breakpointStyles, StyledImage, StyledSection } from './styles';
 
 const LandingView = () => {

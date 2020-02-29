@@ -1,4 +1,4 @@
-export const backgroundColor = '#fffcf5';
+export const backgroundColor = '#fff';
 export const boxShadow = '3px 3px 1.5rem rgba(0, 0, 0, 0.1), -1px 3px 1.5rem rgba(0, 0, 0, 0.1)';
 export const lightGrey = '#999';
 export const offBlack = '#1d1d1d';
