@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .MuiMenuItem-root {
-    color: green !important;
+    color: #393569;
     display: flex;
     justify-content: center;
     padding-left: 0;
@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .MuiAutocomplete-option {
-    color: #17172b;
+    color: #393569;
     padding-left: 1.5rem;
     padding-right: 0;
     &:not(:last-of-type) {

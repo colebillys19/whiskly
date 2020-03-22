@@ -34,7 +34,8 @@ Image.defaultProps = {
   breakpointStyles: '',
   className: '',
   margin: '',
-  ratio: '56.25%',
+  maxWidth: '1000rem',
+  ratio: '100%',
   width: '100%',
 }
 

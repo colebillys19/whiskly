@@ -15,6 +15,7 @@ export const ImageContainer = styled.div`
 
 export const Wrapper = styled.div`
   display: inline-block;
+  max-width: ${({ maxWidth }) => maxWidth};
   position: relative;
   width: ${({ width }) => width};
   &:after {
