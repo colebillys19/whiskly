@@ -10,6 +10,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import muiTheme from './muiTheme';
 import GlobalStyle from './globalStyles';
 import Landing from './components/Landing';
+import Results from './components/Results';
 import NotFound from './components/NotFound';
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
       <ThemeProvider theme={muiTheme}>
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route exact path="/results" component={Results} />
           <Route component={NotFound} />
         </Switch>
         <GlobalStyle />

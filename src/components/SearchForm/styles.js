@@ -1,20 +1,32 @@
+import React from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 
-import { backgroundColor, lightGrey } from '../../styleConstants';
-
-export const StyledButton = styled(Button)`
-border-radius: 0.7rem;
-  color: ${backgroundColor};
-  height: 4.2rem;
+export const StyledButton = styled((props) => (
+  <Button disableRipple {...props} />
+))`
+  background-color: #219df9;
+  border: 0.2rem solid #219df9;
+  border-radius: 0.7rem;
+  box-sizing: content-box;
+  color: white;
+  height: 4rem;
   min-width: 0;
   padding: 0;
-  width: 5.5rem;
+  transition: none;
+  width: 5.3rem;
   & span {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
+  }
+  &:hover {
+    background-color: #17172b;
+  }
+  &:focus {
+    background-color: white;
+    border: 0.2rem solid white;
+    color: #17172b;
   }
 `;
 
@@ -23,15 +35,19 @@ export const StyledForm = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 3rem;
   margin-left: -4.1rem;
   margin-top: -1rem;
 `;
 
-export const StyledIconButton = styled(IconButton)`
+export const StyledIconButton = styled((props) => (
+  <IconButton disableRipple {...props} />
+))`
   margin-left: -1.3rem;
   margin-right: -1.3rem;
-  color: ${lightGrey};
+  color: #03f0fe;
+  &:focus {
+    color: white;
+  }
 `;
 
 export const StyleWrapper = styled.div`
