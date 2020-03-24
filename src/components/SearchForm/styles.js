@@ -36,7 +36,7 @@ export const StyledForm = styled.form`
   flex-wrap: wrap;
   justify-content: center;
   margin-left: -4.1rem;
-  margin-top: -1rem;
+  margin-top: -2.5rem;
 `;
 
 export const StyledIconButton = styled((props) => (
@@ -55,6 +55,6 @@ export const StyleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 3.5rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   width: 27.1rem;
 `;

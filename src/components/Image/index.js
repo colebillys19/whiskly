@@ -8,12 +8,14 @@ const Image = ({
   className,
   image,
   margin,
+  maxWidth,
   ratio,
   width,
 }) => (
   <Wrapper
     breakpointStyles={breakpointStyles}
     className={className}
+    maxWidth={maxWidth}
     ratio={ratio}
     width={width}
   >
@@ -26,6 +28,7 @@ Image.propTypes = {
   className: T.string,
   image: T.string.isRequired,
   margin: T.string,
+  maxWidth: T.string,
   ratio: T.string,
   width: T.string,
 };

@@ -5,7 +5,6 @@ import InfoModal from '../InfoModal';
 import LogoGraphic from '../../images/whiskly-icon.svg';
 import LogoText from '../../images/logo.svg';
 import {
-  breakpointStyles,
   Graphic,
   Text,
   StyledMain,
@@ -28,14 +27,15 @@ const LandingView = () => {
       <StyledSection>
         <Graphic
           image={LogoGraphic}
-          width="20rem"
+          maxWidth="18rem"
+          width="40%"
         />
         <Text
           image={LogoText}
-          breakpointStyles={breakpointStyles}
           margin="1rem"
           ratio="34%"
-          width="40rem"
+          maxWidth="36rem"
+          width="85%"
         />
         <SearchForm handleModalOpen={handleModalOpen} />
       </StyledSection>
