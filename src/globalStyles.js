@@ -57,6 +57,9 @@ const GlobalStyle = createGlobalStyle`
     &:not(:last-of-type) {
       border-bottom: 1px solid #eee;
     }
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.04) !important;
+    }
   }
 
   .MuiListItem-root.Mui-selected,
@@ -67,6 +70,10 @@ const GlobalStyle = createGlobalStyle`
   .MuiListItem-root.Mui-selected:not(:hover),
   .MuiAutocomplete-option[aria-selected="true"]:not(:hover) {
     background-color: white;
+  }
+
+  .MuiAutocomplete-option[data-focus="true"] {
+    background-color: rgba(0, 0, 0, 0.04) !important;
   }
 
   .MuiAutocomplete-paper {
