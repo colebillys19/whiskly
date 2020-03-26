@@ -11,7 +11,7 @@ export const Graphic = styled(Image)`
 `;
 
 export const Text = styled(Image)`
-  margin: -4.5rem 0 3rem;
+  margin: -4.5rem 0 2rem;
   @media (max-width: 420px) {
     margin-top: -5rem;
   }
