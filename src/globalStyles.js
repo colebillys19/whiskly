@@ -59,6 +59,16 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .MuiListItem-root.Mui-selected,
+  .MuiAutocomplete-option[aria-selected="true"] {
+    color: #219df9;
+  }
+
+  .MuiListItem-root.Mui-selected:not(:hover),
+  .MuiAutocomplete-option[aria-selected="true"]:not(:hover) {
+    background-color: white;
+  }
+
   .MuiAutocomplete-paper {
     border-radius: 0.2rem;
     border: 0.1rem solid #ccc;

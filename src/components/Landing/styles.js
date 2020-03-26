@@ -5,10 +5,19 @@ import Image from '../Image';
 export const Graphic = styled(Image)`
   position: relative;
   top: -8rem;
+  @media (max-width: 360px) {
+    top: -5.5rem;
+  }
 `;
 
 export const Text = styled(Image)`
   margin: -4.5rem 0 3rem;
+  @media (max-width: 420px) {
+    margin-top: -5rem;
+  }
+  @media (max-width: 360px) {
+    margin-top: -3rem;
+  }
 `;
 
 export const StyledMain = styled.main`
@@ -19,7 +28,7 @@ export const StyledMain = styled.main`
   @media (max-width: 420px) {
     padding-top: 8vh;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 360px) {
     padding-top: 10vh;
   }
 `;
@@ -37,4 +46,10 @@ export const StyledSection = styled.section`
   padding: 0 0 10rem;
   position: relative;
   width: 100%;
+  @media (max-width: 420px) {
+    padding-bottom: 7.5rem;
+  }
+  @media (max-width: 360px) {
+    padding-bottom: 5rem;
+  }
 `;

@@ -7,26 +7,25 @@ export const StyledButton = styled((props) => (
   <Button disableRipple {...props} />
 ))`
   background-color: #219df9;
-  border: 0.2rem solid #219df9;
   border-radius: 0.7rem;
   box-sizing: content-box;
   color: white;
-  height: 4rem;
+  height: 4.2rem;
   min-width: 0;
   padding: 0;
   transition: none;
-  width: 5.3rem;
+  width: 5.5rem;
   & span {
     font-family: 'Lato', sans-serif;
     font-size: 2.2rem;
   }
   &:hover {
-    background-color: #17172b;
+    background-color: #219df9;
   }
   &:focus {
     background-color: white;
-    border: 0.2rem solid white;
     color: #17172b;
+    transition: all 50ms linear;
   }
 `;
 
