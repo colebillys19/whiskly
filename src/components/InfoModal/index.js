@@ -9,10 +9,14 @@ const InfoModal = ({ handleModalClose, open }) => (
     aria-describedby="describes-how-to-search"
     aria-labelledby="info-modal"
     BackdropComponent={StyledBackdrop}
+    BackdropProps={{
+      timeout: 500,
+    }}
+    closeAfterTransition
     onClose={handleModalClose}
     open={open}
   >
-    <ModalContent />
+    <ModalContent open={open} />
   </StyledModal>
 );
 
