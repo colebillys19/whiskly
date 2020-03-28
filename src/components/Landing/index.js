@@ -11,7 +11,7 @@ import {
   StyledSection,
 } from './styles';
 
-const LandingView = () => {
+const Landing = () => {
   const [open, setOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -44,4 +44,4 @@ const LandingView = () => {
   );
 };
 
-export default LandingView;
+export default Landing;

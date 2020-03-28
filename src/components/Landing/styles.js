@@ -26,10 +26,10 @@ export const StyledMain = styled.main`
   height: 100vh;
   justify-content: center;
   @media (max-width: 420px) {
-    padding-top: 8vh;
+    padding-top: 7vh;
   }
-  @media (max-width: 360px) {
-    padding-top: 10vh;
+  @media (max-width: 350px) {
+    padding-top: 8vh;
   }
 `;
 

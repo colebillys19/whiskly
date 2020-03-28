@@ -18,8 +18,8 @@ const App = () => (
     <StylesProvider injectFirst>
       <ThemeProvider theme={muiTheme}>
         <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/results" component={Results} />
+          <Route exact path="/" component={Results} />
+          <Route exact path="/results" component={Landing} />
           <Route component={NotFound} />
         </Switch>
         <GlobalStyle />
