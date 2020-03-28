@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import SearchForm from '../SearchForm';
 import InfoModal from '../InfoModal';
-import { StyledSection } from './styles';
-import { Fragment } from 'react';
+import {
+  Divider,
+  StyledP,
+  StyledSection,
+} from './styles';
 
 const Results = () => {
   const [open, setOpen] = useState(false);
@@ -20,6 +23,8 @@ const Results = () => {
     <Fragment>
       <StyledSection>
         <SearchForm handleModalOpen={handleModalOpen} />
+        <Divider />
+        <StyledP>Found 6 result(s) in r14 for "React Forms".</StyledP>
       </StyledSection>
       <InfoModal handleModalClose={handleModalClose} open={open} />
     </Fragment>

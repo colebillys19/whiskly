@@ -7,10 +7,15 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${backgroundColor};
     box-sizing: border-box;
     font-size: 62.5%;
+    overflow-y: hidden;
   }
 
   *, *:before, *:after {
     box-sizing: inherit;
+  }
+
+  body {
+    width: 100vw;
   }
   
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {

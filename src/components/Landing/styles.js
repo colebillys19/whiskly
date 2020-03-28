@@ -44,7 +44,6 @@ export const StyledSection = styled.section`
   max-width: 100rem;
   outline: 0.5rem solid white;
   padding: 0 0 10rem;
-  position: relative;
   width: 100%;
   @media (max-width: 420px) {
     padding-bottom: 7.5rem;
