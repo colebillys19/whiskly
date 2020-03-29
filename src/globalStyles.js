@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    overflow-x: hidden;
     width: 100vw;
   }
   

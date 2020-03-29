@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Divider = styled.div`
-  margin: 3rem 0;
+  margin: 2.9rem 0;
   background-color: white;
   max-width: 90rem;
   height: 0.2rem;

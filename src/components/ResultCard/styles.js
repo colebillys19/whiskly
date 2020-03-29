@@ -37,4 +37,5 @@ export const UrlText = styled.p`
   font-size: 1.6rem;
   margin-bottom: 1rem;
   opacity: 0.6;
+  overflow-wrap: break-word;
 `;

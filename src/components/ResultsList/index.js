@@ -6,7 +6,6 @@ import mockData from '../../mockData';
 import ResultCard from '../ResultCard';
 import { Divider, ListContainer } from './styles';
 
-
 const ResultsList = ({ results }) => (
   <ListContainer>
     {results.map((cardProps, i) => (
