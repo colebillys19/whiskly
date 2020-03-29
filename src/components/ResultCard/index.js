@@ -1,9 +1,11 @@
 import React from 'react';
 import T from 'prop-types';
+import { v4 as uuid } from 'uuid';
 
 import {
-  MatchText,
-  StyledHeading,
+  StyledLink,
+  StyledList,
+  StyledListItem,
   UrlText,
 } from './styles';
 
@@ -12,11 +14,13 @@ const ResultCard = ({
   title,
   url,
 }) => (
-  <div>
-    <StyledHeading>{title}</StyledHeading>
+  <section>
+    <StyledLink href={url}>{title}</StyledLink>
     <UrlText>{url}</UrlText>
-    {matches.map((match) => <MatchText>{match}</MatchText>)}
-  </div>
+    <StyledList>
+      {matches.map(match => <StyledListItem key={uuid()}>{match}</StyledListItem>)}
+    </StyledList>
+  </section>
 );
 
 ResultCard.propTypes = {

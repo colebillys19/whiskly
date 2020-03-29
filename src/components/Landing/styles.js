@@ -23,7 +23,7 @@ export const Text = styled(Image)`
 export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   @media (max-width: 420px) {
     padding-top: 7vh;

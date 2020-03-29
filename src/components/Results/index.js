@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
 
-import SearchForm from '../SearchForm';
 import InfoModal from '../InfoModal';
+import ResultsList from '../ResultsList';
+import SearchForm from '../SearchForm';
 import {
   Divider,
   StyledP,
@@ -25,6 +26,7 @@ const Results = () => {
         <SearchForm handleModalOpen={handleModalOpen} />
         <Divider />
         <StyledP>Found 6 result(s) in r14 for "React Forms".</StyledP>
+        <ResultsList />
       </StyledSection>
       <InfoModal handleModalClose={handleModalClose} open={open} />
     </Fragment>
