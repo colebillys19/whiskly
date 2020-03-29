@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { StylesProvider } from '@material-ui/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 
+import BrowserRouter from './BrowserRouter';
 import muiTheme from './muiTheme';
 import GlobalStyle from './globalStyles';
 import Landing from './components/Landing';

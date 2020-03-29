@@ -2,6 +2,8 @@ import React from 'react';
 import T from 'prop-types';
 import InfoIcon from '@material-ui/icons/Info';
 
+import { history } from '../../BrowserRouter';
+
 import {
   StyledButton,
   StyledForm,
@@ -11,24 +13,36 @@ import {
 import CohortSelect from './CohortSelect';
 import SearchField from './SearchField';
 
-const SearchForm = ({ handleModalOpen }) => (
-  <StyledForm>
-    <SearchField />
-    <StyleWrapper>
-      <CohortSelect />
-      <StyledButton
-        color="primary"
-        disableElevation
-        variant="contained"
-      >
-        GO
-      </StyledButton>
-      <StyledIconButton onClick={handleModalOpen} type="button">
-        <InfoIcon />
-      </StyledIconButton>
-    </StyleWrapper>
-  </StyledForm>
-);
+const SearchForm = ({ handleModalOpen }) => {
+  const handleClick = () => {
+    const { location: { pathname } } = history;
+    if (pathname === '/') {
+      history.push('/results');
+    } else {
+      history.push('/');
+    }
+  };
+
+  return (
+    <StyledForm>
+      <SearchField />
+      <StyleWrapper>
+        <CohortSelect />
+        <StyledButton
+          color="primary"
+          disableElevation
+          onClick={handleClick}
+          variant="contained"
+        >
+          GO
+        </StyledButton>
+        <StyledIconButton onClick={handleModalOpen} type="button">
+          <InfoIcon />
+        </StyledIconButton>
+      </StyleWrapper>
+    </StyledForm>
+  );
+};
 
 SearchForm.propTypes = { handleModalOpen: T.func.isRequired };
 
