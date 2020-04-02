@@ -6,11 +6,13 @@ import { offBlack, offWhite } from '../../styleConstants';
 
 export const ModalContentWrapper = styled.div`
   background-color: ${offWhite};
+  border-radius: 1rem;
   border: 0.5rem solid ${offBlack};
+  max-width: 80rem;
   outline: none;
   padding: 5rem;
   position: absolute;
-  border-radius: 1rem;
+  width: calc(100vw + 2rem);
 `;
 
 export const Heading = styled.h1`
