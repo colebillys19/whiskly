@@ -13,6 +13,7 @@ const InfoModal = ({ handleModalClose, open }) => (
       timeout: 500,
     }}
     closeAfterTransition
+    disableScrollLock
     onClose={handleModalClose}
     open={open}
   >
