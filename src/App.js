@@ -13,14 +13,12 @@ import NotFound from './components/NotFound';
 const App = () => (
   <BrowserRouter>
     <StylesProvider injectFirst>
-      <ThemeProvider theme={muiTheme}>
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/results" component={Results} />
-          <Route component={NotFound} />
-        </Switch>
-        <GlobalStyle />
-      </ThemeProvider>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/results" component={Results} />
+        <Route component={NotFound} />
+      </Switch>
+      <GlobalStyle />
     </StylesProvider>
   </BrowserRouter>
 );

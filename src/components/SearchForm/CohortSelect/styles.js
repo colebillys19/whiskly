@@ -43,5 +43,9 @@ export const StyledSelect = styled(Select)`
   & svg {
     color: white;
     right: 0.2rem;
+    top: 0.8rem;
+  }
+  & .MuiSelect-select {
+    padding-bottom: 0.6rem;
   }
 `;

@@ -29,7 +29,6 @@ const SearchForm = ({ handleModalOpen }) => {
       <StyleWrapper>
         <CohortSelect />
         <StyledButton
-          color="primary"
           disableElevation
           onClick={handleClick}
           variant="contained"

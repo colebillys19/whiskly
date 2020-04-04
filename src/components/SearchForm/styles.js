@@ -44,6 +44,9 @@ export const StyledIconButton = styled((props) => (
   margin-left: -1.3rem;
   margin-right: -1.3rem;
   color: #03f0fe;
+  & svg {
+    font-size: 3rem;
+  }
   &:focus {
     color: white;
   }

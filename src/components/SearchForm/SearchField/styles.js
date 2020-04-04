@@ -6,6 +6,7 @@ export const StyledInputAdornment = styled(InputAdornment)`
   margin-left: -0.3rem;
   & svg {
     color: white;
+    font-size: 3rem;
   }
 `;
 
@@ -16,6 +17,7 @@ export const StyledTextField = styled(TextField)`
   width: 90vw;
   & button svg {
     color: white;
+    font-size: 3rem;
   }
   & .MuiInputBase-input {
     color: white;
