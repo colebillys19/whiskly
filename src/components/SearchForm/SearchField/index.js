@@ -10,9 +10,9 @@ const SearchField = () => {
   const [state, setState] = useContext(Context);
   const { autocompleteOptions, searchInput } = state;
 
-  const handleChange = event => {
-    const searchInput = event.target.value;
-    const autocompleteOptions = findMatches(event.target.value);
+  const handleChange = ({ target: { value } }) => {
+    const searchInput = value;
+    const autocompleteOptions = value.length ? findMatches(value) : [];
     setState({ ...state, autocompleteOptions, searchInput });
   };
 
@@ -28,6 +28,7 @@ const SearchField = () => {
     <Autocomplete
       closeIcon={<CloseIcon />}
       forcePopupIcon={false}
+      freeSolo={!autocompleteOptions.length}
       getOptionLabel={option => option}
       options={autocompleteOptions}
       renderInput={renderInput}

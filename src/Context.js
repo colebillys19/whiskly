@@ -1,8 +1,7 @@
 import React, { createContext, useState } from 'react';
-import { mockOptions } from './mockData';
 
 const initialState = {
-  autocompleteOptions: mockOptions,
+  autocompleteOptions: [],
   cohortInput: 13,
   searchInput: '',
 };
