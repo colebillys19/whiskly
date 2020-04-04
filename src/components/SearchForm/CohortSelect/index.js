@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
+import Context from '../../../Context';
 import {
   CohortSelectWrapper,
   StyledLabel,
@@ -8,10 +9,10 @@ import {
 } from './styles';
 
 const CohortSelect = () => {
-  const [cohort, setCohort] = useState(13);
+  const [state, setState] = useContext(Context);
 
   const handleChange = event => {
-    setCohort(event.target.value);
+    setState({ ...state, cohortInput: event.target.value });
   };
   
   return (
@@ -19,7 +20,7 @@ const CohortSelect = () => {
       <StyledLabel>cohort</StyledLabel>
       <StyledSelect
         onChange={handleChange}
-        value={cohort}
+        value={state.cohortInput}
       >
         <StyledMenuItem value={11}>11</StyledMenuItem>
         <StyledMenuItem value={12}>12</StyledMenuItem>

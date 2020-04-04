@@ -1,4 +1,42 @@
-const mockData = [
+export const mockOptions = [
+  'AJAX',
+  'Bootstrap',
+  'CSS Display + Positioning',
+  'Database OO Design Patterns',
+  'DDL & Schema Design',
+  'Deployment with Heroku',
+  'Git Intro',
+  'Git Workflow',
+  'Hashing and JWTs with Node',
+  'How the Web Works',
+  'Intermediate JS 1',
+  'Intermediate JS 2',
+  'Intro to Express.js',
+  'Intro to Node.js',
+  'Intro to Postgres with Node',
+  'Introduction to Big-O',
+  'Introduction to Databases',
+  'Introduction to Python',
+  'Pair Programming',
+  'Professional Coding',
+  'Python Data Structures',
+  'Python Object Orientation',
+  'Python Tools & Techniques',
+  'React Component Lifecycle',
+  'React Context',
+  'React Events',
+  'React Forms',
+  'React State',
+  'ReactJS',
+  'Relationships in SQL',
+  'SQL Alchemy',
+  'SQL Querying',
+  'Validation with JSONSchema',
+  'Whiteboarding',
+  'Working With APIs',
+];
+
+export const mockResults = [
   {
     matches: [
       'React Redux, React-Redux',
@@ -90,5 +128,3 @@ const mockData = [
     url: 'http://curric.rithmschool.com/r13/lectures/react-forms/',
   },
 ];
-
-export default mockData;

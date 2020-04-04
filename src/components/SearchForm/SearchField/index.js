@@ -1,28 +1,36 @@
-import React  from 'react';
+import React, { useContext } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CloseIcon from '@material-ui/icons/Close';
 
+import Context from '../../../Context';
 import TextField from './TextField';
-
-const top100Films = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'The Dark Knight', year: 2008 },
-  { title: '12 Angry Men', year: 1957 },
-  { title: "Schindler's List", year: 1993 },
-];
+import { findMatches } from './helpers';
 
 const SearchField = () => {
-  //
-  
+  const [state, setState] = useContext(Context);
+  const { autocompleteOptions, searchInput } = state;
+
+  const handleChange = event => {
+    const searchInput = event.target.value;
+    const autocompleteOptions = findMatches(event.target.value);
+    setState({ ...state, autocompleteOptions, searchInput });
+  };
+
+  const renderInput = params => (
+    <TextField
+      onChange={handleChange}
+      value={searchInput}
+      {...params}
+    />
+  );
+ 
   return (
     <Autocomplete
       closeIcon={<CloseIcon />}
       forcePopupIcon={false}
-      getOptionLabel={option => option.title}
-      options={top100Films}
-      renderInput={params => <TextField {...params} />}
+      getOptionLabel={option => option}
+      options={autocompleteOptions}
+      renderInput={renderInput}
     />
   );
 };

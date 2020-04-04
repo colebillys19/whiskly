@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 import { v4 as uuid } from 'uuid';
 
-import mockData from '../../mockData';
+import { mockResults } from '../../mockData';
 import ResultCard from '../ResultCard';
 import { Divider, ListContainer } from './styles';
 
@@ -19,6 +19,6 @@ const ResultsList = ({ results }) => (
 
 ResultsList.propTypes = { results: T.array.isRequired };
 
-ResultsList.defaultProps = { results: mockData };
+ResultsList.defaultProps = { results: mockResults };
 
 export default ResultsList;
