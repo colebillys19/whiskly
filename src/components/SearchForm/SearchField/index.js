@@ -7,17 +7,17 @@ import TextField from './TextField';
 import { findMatches } from './helpers';
 
 const SearchField = () => {
-  const [state, setState] = useContext(Context);
-  const { autocompleteOptions, searchInput } = state;
-
+  const [context, setContext] = useContext(Context);
+  const { autocompleteOptions, searchInput } = context;
+  
   const handleChange = ({ target: { value } }) => {
     const searchInput = value;
     const autocompleteOptions = value.length ? findMatches(value) : [];
-    setState({ ...state, autocompleteOptions, searchInput });
+    setContext({ ...context, autocompleteOptions, searchInput });
   };
 
   const handleBlur = () => {
-    setState({ ...state, autocompleteOptions: [] });
+    setContext({ ...context, autocompleteOptions: [] });
   };
 
   const renderInput = params => (
@@ -33,7 +33,7 @@ const SearchField = () => {
     <Autocomplete
       closeIcon={<CloseIcon />}
       forcePopupIcon={false}
-      freeSolo={!autocompleteOptions.length}
+      freeSolo={!!autocompleteOptions}
       getOptionLabel={option => option}
       options={autocompleteOptions}
       renderInput={renderInput}
