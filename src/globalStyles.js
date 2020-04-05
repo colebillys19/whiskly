@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    padding-right: 0 !important;
     width: 100vw;
   }
   

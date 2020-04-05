@@ -8,7 +8,7 @@ const ModalContent = forwardRef((props, ref) => (
   <Fade in={props.open} timeout={500}>
     <ModalContentWrapper ref={ref} {...props}>
       <Heading id="info-modal">Info Modal</Heading>
-      <p id="describes-how-to-search">{modalText}</p>
+      <p id="describes-how-to-use">{modalText}</p>
     </ModalContentWrapper>
   </Fade>
 ));
