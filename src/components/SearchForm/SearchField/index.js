@@ -16,8 +16,13 @@ const SearchField = () => {
     setState({ ...state, autocompleteOptions, searchInput });
   };
 
+  const handleBlur = () => {
+    setState({ ...state, autocompleteOptions: [] });
+  };
+
   const renderInput = params => (
     <TextField
+      onBlur={handleBlur}
       onChange={handleChange}
       value={searchInput}
       {...params}
