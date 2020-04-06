@@ -9,16 +9,17 @@ import {
 } from './styles';
 
 const CohortSelect = () => {
-  const [state, setState] = useContext(Context);
+  const [context, setContext] = useContext(Context);
+  const { cohortInput } = context;
 
-  const handleChange = event => {
-    setState({ ...state, cohortInput: event.target.value });
+  const handleChange = ({ target: { value } }) => {
+    setContext({ ...context, cohortInput: value });
   };
   
   return (
     <CohortSelectWrapper>
       <StyledLabel>cohort</StyledLabel>
-      <StyledSelect onChange={handleChange} value={state.cohortInput}>
+      <StyledSelect onChange={handleChange} value={cohortInput}>
         <StyledMenuItem value={11}>11</StyledMenuItem>
         <StyledMenuItem value={12}>12</StyledMenuItem>
         <StyledMenuItem value={13}>13</StyledMenuItem>

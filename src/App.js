@@ -10,7 +10,6 @@ import Results from './components/Results';
 import NotFound from './components/NotFound';
 
 const App = () => {
-  // const [state, setState] = useState(initialState);
   return (
     <ContextProvider>
       <BrowserRouter>
