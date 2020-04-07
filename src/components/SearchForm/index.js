@@ -14,7 +14,8 @@ import CohortSelect from './CohortSelect';
 import SearchField from './SearchField';
 
 const SearchForm = ({ handleModalOpen }) => {
-  const handleClick = () => {
+  const handleClick = event => {
+    event.preventDefault();
     const { location: { pathname } } = history;
     if (pathname === '/') {
       history.push('/results');
