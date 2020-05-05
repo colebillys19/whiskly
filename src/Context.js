@@ -4,6 +4,7 @@ const initialState = {
   autocompleteOptions: [],
   cohortInput: 13,
   searchInput: '',
+  serversAwake: false,
 };
 
 const Context = createContext([{}, () => {}]);

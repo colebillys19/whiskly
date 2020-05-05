@@ -1,45 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 
-import SearchForm from '../SearchForm';
-import InfoModal from '../InfoModal';
-import LogoGraphic from '../../images/whiskly-icon.svg';
-import LogoText from '../../images/logo.svg';
-import {
-  Graphic,
-  Text,
-  StyledMain,
-  StyledSection,
-} from './styles';
+import Context from '../../Context';
+import LandingView from '../LandingView';
+import LandingLoading from '../LandingLoading';
+
+import { pingServers } from './helpers';
+import { StyledMain } from './styles';
 
 const Landing = () => {
-  const [open, setOpen] = useState(false);
+  const [context, setContext] = useContext(Context);
+  const { serversAwake } = context;
 
-  const handleModalOpen = () => {
-    setOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    if (!serversAwake) {
+      pingServers(context, setContext);
+    };
+  }, []); // eslint-disable-line
 
   return (
     <StyledMain>
-      <StyledSection>
-        <Graphic
-          image={LogoGraphic}
-          maxWidth="18rem"
-          width="40%"
-        />
-        <Text
-          image={LogoText}
-          margin="1rem"
-          ratio="34%"
-          maxWidth="36rem"
-          width="85%"
-        />
-        <SearchForm handleModalOpen={handleModalOpen} />
-      </StyledSection>
-      <InfoModal handleModalClose={handleModalClose} open={open} />
+      {serversAwake ? <LandingView /> : <LandingLoading />}
     </StyledMain>
   );
 };
