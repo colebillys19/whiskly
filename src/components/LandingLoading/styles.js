@@ -1,11 +1,40 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const StyledSection = styled.section`
-  text-align: center;
+import Image from '../Image';
+
+export const Ellipsis = styled.span`
+  position: absolute;
+  right: -4.9rem;
+  padding-left: 0.8rem;
+  width: 4.9rem;
 `;
 
-export const Text = styled.p`
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const StyledImage = styled(Image)`
+  animation: ${rotate} 2s linear infinite;
+`;
+
+export const StyledSection = styled.section`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const TextWrapper = styled.div`
   color: white;
-  font-size: 4rem;
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
+  position: relative;
+  span {
+    font-size: 4rem;
+  }
 `;
