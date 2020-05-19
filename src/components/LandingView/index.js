@@ -11,14 +11,14 @@ import {
 } from './styles';
 
 const LandingView = () => {
-  const [open, setOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleModalOpen = () => {
-    setOpen(true);
+    setModalOpen(true);
   };
 
   const handleModalClose = () => {
-    setOpen(false);
+    setModalOpen(false);
   };
 
   return (
@@ -38,7 +38,7 @@ const LandingView = () => {
         />
         <SearchForm handleModalOpen={handleModalOpen} />
       </StyledSection>
-      <InfoModal handleModalClose={handleModalClose} open={open} />
+      <InfoModal handleModalClose={handleModalClose} open={modalOpen} />
     </Fragment>
   );
 };

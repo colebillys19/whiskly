@@ -1,5 +1,9 @@
 import React from 'react';
 
-const ResultsLoading = () => <div>ResultsLoading</div>
+const ResultsLoading = () => {
+  //
+
+  return <div />;
+};
 
 export default ResultsLoading;

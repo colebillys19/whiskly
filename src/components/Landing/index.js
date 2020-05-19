@@ -4,7 +4,7 @@ import Context from '../../Context';
 import LandingView from '../LandingView';
 import LandingLoading from '../LandingLoading';
 
-import { pingServers } from './helpers';
+import { pingServers } from '../../globalHelpers';
 import { StyledMain } from './styles';
 
 const Landing = () => {

@@ -1,7 +1,16 @@
-import React, { Fragment, useState } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+
+import Context from '../../Context';
+import { pingServers } from '../../globalHelpers';
 
 import InfoModal from '../InfoModal';
 import ResultsList from '../ResultsList';
+import ResultsLoading from '../ResultsLoading';
 import SearchForm from '../SearchForm';
 import {
   Divider,
@@ -10,14 +19,25 @@ import {
 } from './styles';
 
 const Results = () => {
-  const [open, setOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [context, setContext] = useContext(Context);
+  const { serversAwake } = context;
+
+  // temp...
+  const data = true;
+
+  useEffect(() => {
+    if (!serversAwake) {
+      pingServers(context, setContext);
+    };
+  }, []); // eslint-disable-line
 
   const handleModalOpen = () => {
-    setOpen(true);
+    setModalOpen(true);
   };
 
   const handleModalClose = () => {
-    setOpen(false);
+    setModalOpen(false);
   };
 
   return (
@@ -26,9 +46,9 @@ const Results = () => {
         <SearchForm handleModalOpen={handleModalOpen} />
         <Divider />
         <StyledP>Found 6 result(s) in r14 for "React Forms".</StyledP>
-        <ResultsList />
+        {serversAwake && data ? <ResultsList /> : <ResultsLoading />}
       </StyledSection>
-      <InfoModal handleModalClose={handleModalClose} open={open} />
+      <InfoModal handleModalClose={handleModalClose} open={modalOpen} />
     </Fragment>
   );
 };
