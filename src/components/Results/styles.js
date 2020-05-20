@@ -11,11 +11,13 @@ export const Divider = styled.div`
 
 export const StyledP = styled.p`
   color: white;
-  font-size: 2.5rem;
   margin: 0 auto 3rem;
   max-width: 70.5rem
   padding: 0 3rem;
   text-align: center;
+  & span {
+    font-size: 2.5rem;
+  }
 `;
 
 export const StyledSection = styled.section`

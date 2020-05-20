@@ -9,7 +9,6 @@ export const BonesWrapper = styled.div`
 `;
 
 export const Ellipsis = styled.span`
-  padding-left: 0.8rem;
   position: absolute;
   right: 0;
   width: 4.9rem;
@@ -39,19 +38,12 @@ export const StyledSection = styled.section`
   justify-content: center;
 `;
 
-export const SubstringWrapper = styled.span`
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  width: 16.5rem;
-`;
-
 export const TextWrapper = styled.div`
   color: white;
   margin-bottom: 3rem;
   position: relative;
-  text-align: center;
   span {
     font-size: 3.6rem;
   }
+  width: 18.2rem;
 `;

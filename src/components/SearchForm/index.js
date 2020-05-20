@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import T from 'prop-types';
 import InfoIcon from '@material-ui/icons/Info';
 
+import Context from '../../Context';
 import { history } from '../../BrowserRouter';
+import { fetchResults } from '../../helpers';
 
+import CohortSelect from './CohortSelect';
+import SearchField from './SearchField';
 import {
   StyledButton,
   StyledForm,
   StyledIconButton,
   StyleWrapper,
 } from './styles';
-import CohortSelect from './CohortSelect';
-import SearchField from './SearchField';
 
 const SearchForm = ({ handleModalOpen }) => {
+  const [context, setContext] = useContext(Context);
+  const { cohortInput, searchInput } = context;
+
   const handleClick = event => {
     event.preventDefault();
     const { location: { pathname } } = history;
     if (pathname === '/') {
       history.push('/results');
-    } else {
-      history.push('/');
     }
+    fetchResults(cohortInput, searchInput);
   };
 
   return (

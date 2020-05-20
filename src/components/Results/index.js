@@ -20,17 +20,23 @@ import {
 
 const Results = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [searchCohort, setSearchCohort] = useState('');
+  const [searchQuery, setSearchQuery] = useState('ReactJS');
   const [context, setContext] = useContext(Context);
-  const { serversAwake } = context;
+  const { results, serversAwake } = context;
 
-  // temp...
-  const data = true;
+  // results = []
 
   useEffect(() => {
     if (!serversAwake) {
       pingServers(context, setContext);
+      // scrape
     };
   }, []); // eslint-disable-line
+
+  useEffect(() => {
+    // grab query and cohort from search and set values
+  }, [results]); // eslint-disable-line
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -45,8 +51,11 @@ const Results = () => {
       <StyledSection>
         <SearchForm handleModalOpen={handleModalOpen} />
         <Divider />
-        <StyledP>Found 6 result(s) in r14 for "React Forms".</StyledP>
-        {serversAwake && data ? <ResultsList /> : <ResultsLoading />}
+        <StyledP>
+          <span>{`${results.length} result${results.length === 1 ? '' : 's'}`}</span>
+          <span>{searchQuery ? ` matching "${searchQuery}"` : ''}</span>
+        </StyledP>
+        {serversAwake && results.length ? <ResultsList /> : <ResultsLoading />}
       </StyledSection>
       <InfoModal handleModalClose={handleModalClose} open={modalOpen} />
     </Fragment>

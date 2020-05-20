@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react';
 const initialState = {
   autocompleteOptions: [],
   cohortInput: 13,
+  results: [],
   searchInput: '',
   serversAwake: false,
 };

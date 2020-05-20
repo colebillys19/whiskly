@@ -9,7 +9,6 @@ import {
   BonesWrapper,
   Ellipsis,
   StyledSection,
-  SubstringWrapper,
   TextWrapper,
 } from './styles';
 
@@ -25,11 +24,8 @@ const LandingLoading = () => {
   return (
     <StyledSection>
       <TextWrapper>
-        <span>Waking up Heroku </span>
-        <SubstringWrapper>
-          servers
-          <Ellipsis>{ellipsisStr}</Ellipsis>
-        </SubstringWrapper>
+        <span>Loading</span>
+        <Ellipsis>{ellipsisStr}</Ellipsis>
       </TextWrapper>
       <BonesWrapper>
         <StyledImage
@@ -39,10 +35,10 @@ const LandingLoading = () => {
           zIndex="2"
         />
         <StyledImage
-          animationSpeed="4.5s"
+          animationSpeed="5s"
           image={BoneB}
           maxWidth="10rem"
-          opacity="0.3"
+          opacity="0.1"
           zIndex="1"
         />
       </BonesWrapper>

@@ -14,6 +14,7 @@ const Landing = () => {
   useEffect(() => {
     if (!serversAwake) {
       pingServers(context, setContext);
+      // scrape
     };
   }, []); // eslint-disable-line
 
